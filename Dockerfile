@@ -22,10 +22,10 @@ RUN cd /
 
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 
-RUN mkdir /VJ-FILTER-BOT
+RUN mkdir /VJ-File-Store
 
-WORKDIR /VJ-FILTER-BOT
+WORKDIR /VJ-File-Store
 
-COPY . /VJ-FILTER-BOT
+COPY . /VJ-File-Store
 
 CMD ["python", "bot.py"]
