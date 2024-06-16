@@ -35,7 +35,7 @@ API_HASH = environ.get("API_HASH", "a20b3dbbe07ed695563b4609a3e62012")
 ADMINS = int(environ.get("ADMINS", "578811855"))
 
 # Database Information
-CLONE_DB_URI = environ.get("CLONE_DB_URI", "")
+CLONE_DB_URI = environ.get("CLONE_DB_URI", "mongodb+srv://Anjali:hari813142@anjali.jj1pxtg.mongodb.net/?retryWrites=true&w=majority")
 CDB_NAME = environ.get("CDB_NAME", "clonevjbotz")
 DB_URI = environ.get("DB_URI", "mongodb+srv://Anjali:hari813142@anjali.jj1pxtg.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = environ.get("DB_NAME", "Anjali")
