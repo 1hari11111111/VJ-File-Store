@@ -1,9 +1,23 @@
-FROM python:3.8-slim-buster
-WORKDIR /app
+FROM python:3.10.8-slim-buster
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
 
-COPY . .
 
-CMD python3 main.py
+RUN apt update && apt upgrade -y
+
+RUN apt install git -y
+
+COPY requirements.txt /requirements.txt
+
+
+
+RUN cd /
+
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+
+RUN mkdir /VJ-File-Store
+
+WORKDIR /VJ-File-Store
+
+COPY . /VJ-File-Store
+
+CMD ["python", "bot.py"]
